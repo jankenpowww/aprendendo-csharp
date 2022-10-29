@@ -1,0 +1,16 @@
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\bin\Debug\net5.0\aula09.exe
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\bin\Debug\net5.0\aula09.deps.json
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\bin\Debug\net5.0\aula09.runtimeconfig.json
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\bin\Debug\net5.0\aula09.runtimeconfig.dev.json
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\bin\Debug\net5.0\aula09.dll
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\bin\Debug\net5.0\aula09.pdb
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.csproj.AssemblyReference.cache
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.AssemblyInfoInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.AssemblyInfo.cs
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.csproj.CoreCompileInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.dll
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\refint\aula09.dll
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.pdb
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\aula09.genruntimeconfig.cache
+C:\Users\mathe\Documents\Dev\Estudo\c#\cs-vscode\aula09\obj\Debug\net5.0\ref\aula09.dll
