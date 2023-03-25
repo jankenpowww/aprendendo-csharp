@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a01</title>
+</head>
+<body>
+    <h1>C# a01 - Preparando o ambiente.</h1>
+
+    <main>
+        <p>Por se tratar de uma linguagem de programação mantida pela Microsoft, versões do C# podem estar disponíveis dentro da pasta <b>Window > Microsoft.NET</b>. Isso significa que é possível desenvolver programas em C# com a versão atual instaladas em um sistema operacional do Windows.</p>
+
+        <p>Mas para se manter atualizado com as últimas versões lançadas da linguagem, ainda é necessário fazer suas instalações. Em <a href="https://dotnet.microsoft.com/downloads" target="_blank" rel="external">https://dotnet.microsoft.com/downloads</a>, é possível encontrar essas últimas versões do C# e do .NET Framework necessárias para o desenvolvimento. A versão utilizada do C# aqui é a versão 7.0 do .NET Framework SDK.</p>
+
+        <p>Para este começo, a IDE utilizada será o Visual Studio Code. Extensão do C# para a linguagem também deve ser instalada.</p>
+
+        <p><b>Importante!</b> Note que, apesar do C# estar instalado no Windows por padrão, <b>o seu compilador, o csc.exe, não pode ser executado por conta do Windows não reconhecê-lo</b>. Para resolver isso, basta adicionar o caminho da pasta onde se encontra o csc.exe no Path do Windows, em variáveis de ambiente. Para isso, você deve localizar o caminho da pasta do executável (não o caminho para o executável), editar o Path dentro das variáveis de ambiente para todo o sistema, e adicionar um novo caminho que é o caminho do executável e confirmar tudo.</p>
+
+        <p>As mudanças só ocorrem depois de reiniciar o computador. Depois de reiniciar, tente executar o comando <b>csc</b> no prompt de comando. A ideia aqui é que a mensagem de que "o Windows não reconhece como comando interno ..." não apareça dessa vez. Se não, como esperado, é sinal de que compilar os programas escritos em C# é totalmente possível via terminal! Caso contrário, <b>verifique se o caminho especificado é da pasta onde se encontra o compilador, e não um caminho que inclua o executável em si</b>.</p>
+
+        <br>
+
+        <h1>Programando em C#</h1>
+        <p>Tudo devidamente pronto, vamos conhecer finalmente os primeiros processos de programação em C#. Mas para isso, temos de entender como é a estrutura principal de um programa em C# e alguns primeiros comandos. Observe...</p>
+
+        <p>No terminal, já dentro do VSCode e dentro da pasta do projeto, podemos inicializar um projeto em C# com o seguinte comando:</p>
+
+        <pre>
+<code>
+<span class="tLaranja">dotnet</span> new console</code>
+        </pre>
+
+        <p>Isso vai gerar no explorador as pastas e arquivos do projeto com a versão mais recente instalada do C#. <b>O projeto de nome "Program.cs" é o que importa aqui agora.</b> Ao abrir, temos de cara a seguinte "estrutura" no nosso código-fonte:</p>
+
+        <pre>
+<code>
+<span class="tCinza">// See https://aka.ms/new-console-template for more information</span>
+<span>Console.WriteLine("Hello, World!");</code>
+        </pre>
+
+        <p>Isso mesmo: nenhuma estrutura! E isso porque as versões novas do C#/.NET à partir de 6.0 contam com algo chamado de "instruções de nível superior". Isso significa que os novos modelos de projeto não necessitam daquela estrutura de uma classe principal para rodar um programa.</p>
+
+        <p>Para rodar o código gerado acima precisamos garantir que ainda estamos na pasta do projeto da qual geramos a estrutura de arquivos e pastas com o comando anterior. E no terminal, digitamos...</p>
+
+        <pre>
+<code>
+<span class="tLaranja">dotnet</span> run</code>
+        </pre>
+
+        <p>E ele retornará "Hello, World!" no console no mesmo instante.</p>
+
+        <br>
+
+        <h1>Porém, contudo, todavia...</h1>
+        <p>Embora estejamos utilizando e lidando com features novas das versões mais recentes do C#, por questão de aprendizado, vamos aprender e entender a escrever em C# utilizando da sua estrutura, e compreender de uma vez por todas como funciona essa linguagem que é primariamente orientada a objeto.</p>
+
+        <p>Podemos gerar um projeto com a estrutura convencional sem nenhum problema utilizando dessa vez a flag <span class="tCodigo"><span class="tCinza">--use-program-main</span></span> quando inicializarmos um novo projeto.</p>
+
+        <pre>
+<code>
+<span class="tLaranja">dotnet</span> new console <span class="tCinza">--use-program-main</span></code>
+        </pre>
+
+        <p>E abrindo o Program.cs no editor, temos finalmente nossa estrutura!</p>
+
+        <pre>
+<code>
+namespace teste;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}</code>
+        </pre>
+
+        <p>É interessante notar que o uso da diretiva <span class="tCodigo">using</span> aqui, considerando as novas versões em comparação com as estruturas padrões em versões anteriores, não são incluídos mais e são desconsiderados pelo próprio editor.</p>
+
+        <footer>
+            <a href="../a02/a02.html">Próxima Página</a>
+        </footer>
+    </main>
+</body>
+</html>
