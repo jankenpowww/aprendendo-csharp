@@ -5,13 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
-    <title>a01</title>
+    <title>a02</title>
 </head>
 <body>
     <h1>C# a02 - Primeiro Programa no Padrão C# .NET</h1>
 
     <main>
-        <p></p>
+        <h1>O que é o .NET Framework?</h1>
+        <p>É a plataforma de desenvolvimento em C# criado e mantido pela Microsoft de forma totalmente única. Desenvolver programas C# no padrão .NET é desenvolver programas para além da família de sistemas operacionais do Windows. Você pode notar que essa é mesma ideia de outras linguagens semelhantes ao C#, como o Java, que utiliza da JVM para compilar e rodar programas escritos nessa linguagem em múltiplas plataformas.</p>
+
+        <br>
+
+        <h1>Dando nome aos bois</h1>
+        <p>Para entender melhor a estrutura apresentada por último na página anterior, iremos destrinchar e descobrir o que cada diretiva, palavras e estruturas aqui significam...</p>
+
+        <pre>
+<code>
+using System;
+namespace a01;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}</code>
+        </pre>
+
+        <p>Começemos pela linha <span class="tCodigo">using System;</span>. Utilizamos a diretiva 'using' <b>para toda vez que queremos importar uma biblioteca para o nosso projeto</b>. As bibliotecas, ou como podem ser conhecidas como '<b>namespaces</b>', podem ser instaladas através do Gerenciador de Pacotes do C#: o <a href="https://www.nuget.org/" target="_blank" rel="external">NuGet</a>.</p>
+
+        <p>A biblioteca/namespace System é uma biblioteca/namespace padrão da linguagem que provê acesso <b>a uma infinidade de funções referentes a manipulação de componentes fundamentais</b> que são utilizados com bastante frequência durante o desenvolvimento de um programa em C#. À fim de um melhor entendimento, é através do namespace System <b>que conseguimos acessar e utilizar o método</b> <span class="tCodigo">Console.WriteLine()</span>, que escreve um conteúdo de texto passado como string no terminal, por exemplo.</p>
+
+        <p>Note que, como mencionado anteriormente, a declaração de System propriamente dito pode ser desconsiderado atualmente devido atualizações da linguagem (visto que é alertado diretamente no editor de código do VSCode).</p>
+
+        <p>...</p>
+
+        <p>A linha seguinte, <span class="tCodigo">namespace a01</span>, segue o mesmo conceito. 'a01', que é nome da pasta onde estão os arquivos-fonte do projeto, é utilizado como 'namespace' para <b>guardar e ser utilizado para acessar as classes e métodos do arquivo-fonte onde eles foram declarados (?).</b> Isso significa que, através de a01, podemos acessar a classe <span class="tCodigo">Program</span> e de Program, acessar o método <span class="tCodigo">Main</span>, como está descrito no código fonte acima. Em resumo, <b>namespace guardam e organizam classes e métodos dentro de um nome especifico e referente ao arquivo fonte em que estão declarados</b>.</p>
+
+        <br>
+
+        <h1>static void Main(string[] args){}</h1>
+        <p>Um método de modificador estático, ou <b>static</b>, referem-se aos métodos/classes/propriedades/etc. <b>que são chamados e não são associados propriamente dito a uma instância de classe</b>. Isso significa que, a chamada de um método estático pode ser feita apenas chamando o método em si, já que este tipo de método não é associado a uma classe propriamente dita. Isso signfica que métodos estáticos podem ser chamados independentemente de possuírem classes (vide código-fonte disponível neste diretório).</p>
+
+        <p><span class="tCodigo">args</span> é passado como parâmetro como um array de strings. Essa array de String diz respeito <b>a cada versão de execução do programa que é organizada dentro desses índices e que podem ser acessados</b>, em uma explicação muito breve.</p>
+
+        <p>De qualquer jeito, é necessário entender que métodos estáticos são métodos independente de classes. E é de um método estático que todas as outras classes e métodos organizados em outros arquivos são instanciados e executados dentro, uma vez que se faz a compilação do código.</p>
 
         <footer>
             <a href="../a01/a01.html">Página Anterior</a>
