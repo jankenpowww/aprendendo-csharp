@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a03</title>
+</head>
+<body>
+    <h1>C# a03 - Variáveis em C#</h1>
+
+    <main>
+        <h1>... e o que é linguagem de tipagem forte.</h1>
+        <p>Linguagens fortemente tipadas como Java e até mesmo o C# se enquadram nessa definição de "linguagem de tipagem forte". E o que isso significa, afinal? De forma bastante resumida <s>e nada técnica, diga-se de passagem</s> as linguagens tipadas são aquela que exigem que tipos primitivos sejam fixos para suas variáveis: isso significa que, <b>se variável x é do tipo inteiro, seu valor deve ser um inteiro</b>, independentemente do valor que entra ou é modificado por outro.</p>
+
+        <p>Seguindo a lógica, podemos interpretar que linguagens fracamente tipadas possuem uma filosofia diferente, e até mais liberal nesse sentido, à respeito de suas variáveis. PHP, Python e outras linguagens onde variáveis são dinâmicas podem receber uma string até certo momento da execução de um código e, em outra, receber um valor inteiro. <b>Essa é uma das grandes características divergentes entre linguagens interpretadas e linguagens compiladas, inclusive</b>. JavaScript, que é uma linguagem de tipagem fraca, permite que variáveis recebam não só strings e valores numéricos literais, mas como também funções com blocos de código inteiros, coisa que em linguagens de tipagem forte já não permitem.</p>
+
+        <br>
+
+        <h1>Variáveis em C#</h1>
+        <p>No C#, a síntaxe de declaração de variável segue primeiramente <b>declarando o tipo primitivo</b> e em seguida <b>o nome identificador da variável</b>. Variáveis podem ser declaradas sem receber nenhum valor aparente, mas é bom se atentar <b>com erros causados durante execuções de código por conta das variáveis não serem inicializadas</b>.</p>
+
+        <p>O programinha a seguir pede nome e idade do usuário. Sabendo que 'nome' é um tipo de dado constituído por caracteres e 'idade' é um valor numérico inteiro, temos as nossas primeiras variáveis criadas e seus tipos definidos!</p>
+
+        <p>Ao capturar, vamos devolver essa informação no terminal em um texto bonito que concatena variável e texto. Observe:</p>
+
+        <pre>
+<code>
+namespace a03;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine(<span class="tLaranja">"Qual é o seu nome?"</span>);
+        <span class="tRosa">string</span> <span class="tBranco">nome</span> = Console.ReadLine();
+
+        Console.WriteLine(<span class="tBranco">nome</span> + <span class="tLaranja">", quantos anos você tem?"</span>)
+        <span class="tRosa">int</span> <span class="tBranco">idade</span> = Console.ReadLine();
+
+        Console.WriteLine(<span class="tLaranja">$"\nSeu nome é {<span class="tBranco">nome</span>} e você tem {<span class="tBranco">idade</span>} anos de idade."</span>)
+    }
+}</code>
+        </pre>
+
+        <p>E rodando o código acima, temos...</p>
+
+        <pre>
+<code>
+<span class="tVermelho">... error CS0029: Não é possível converter implicitamente tipo "string" 
+em "int" ...</span></code>
+        </pre>
+
+        <p>Um erro de código. E exatamente na variável que vai receber o valor referente a idade (já que é o único de tipo de variável setada como int). Porquê?</p>
+
+        <p>Por que quando utilizamos o método de entrada de informações no C#, ou <span class="tCodigo">Console.ReadLine()</span> pros mais íntimos, precisamos entender que <b>toda informação digitada pelo usuário no terminal é um valor String por padrão</b>. Uma das soluções possíveis seria <b>alterar o tipo primitivo da variável em questão para o mesmo tipo de nome, que é string</b>.</p>
+        
+        <p>Mas e se partirmos do pressuposto de que uma variável de tipo numérico PRECISA ser de tipo numérico, uma vez que podemos lidar com comparações de valores e que isso só é possível quando uma informação de uma variável é um número, por exemplo?</p>
+
+        <p>A alternativa correta seria <b>converter o tipo de dado recebido para o tipo de dado apropriado</b>. Neste caso, a variável 'idade', que recebe um valor inteiro (int), está recebendo um valor de cadeia de caracteres (string). Faremos uma conversão de valores de 'string' para 'int'.</p>
+
+        <pre>
+<code>
+...
+        <span class="tRosa">int</span> <span class="tBranco">idade</span> = int.Parse(Console.ReadLine());
+...</code>
+        </pre>
+
+        <p>Basicamente passamos o método 'Console.ReadLine()' dentro de outro método como parâmetro, o <span class="tCodigo">int.Parse()</span>. 'int', além de tipo primitivo, também é <b>nome de uma estrutura do C# que pode ser utilizada para acessar métodos referente ao valor de tipo primitivo de numeros inteiros</b>, um desses métodos é justamente esse de converter um valor de tipo tal para um valor numérico de tipo inteiro, desde que o valor corresponda a um valor numérico que possua parte inteira.</p>
+
+        <p>Perceba como as variáveis aqui devem ser estritamente respeitadas quanto ao seu tipo primitivo. Essa é uma demonstração objetiva de como linguagens de tipagem forte funcionam.</p>
+
+        <br>
+
+        <h1>Os tipos de variáveis em C#</h1>
+        <p>Confira a lista com esses e outros tipos primitivos interessantes dentro do C# que podem ser utilizadas:</p>
+
+        <table>
+            <thead>
+                <th>Tipo</th>
+                <th>Descrição</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>int</td>
+                    <td>Recebe valores numéricos inteiros.</td>
+                </tr>
+                <tr>
+                    <td>string</td>
+                    <td>Recebe valores de cadeia de caracteres. Em resumo: texto, número, símbolos, espaços e o mais importante: tudo o que está entre aspas.</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>Recebe, em aspas símples, um valor/digito ou caracter único.</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>Recebe um valor decimal <a href="http://net-informations.com/q/faq/float.html#:~:text=The%20Decimal%2C%20Double%2C%20and%20Float,bit%20floating%20point%20data%20type." target="_blank" rel="external">com uma precisão de 32 bits</a>.</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>Recebe um valor decimal <a href="http://net-informations.com/q/faq/float.html#:~:text=The%20Decimal%2C%20Double%2C%20and%20Float,bit%20floating%20point%20data%20type." target="_blank" rel="external">com uma precisão de 64 bits</a>.</td>
+                </tr>
+                <tr>
+                    <td>decimal</td>
+                    <td>Recebe um valor decimal <a href="http://net-informations.com/q/faq/float.html#:~:text=The%20Decimal%2C%20Double%2C%20and%20Float,bit%20floating%20point%20data%20type." target="_blank" rel="external">com uma precisão de 128 bits</a>.</td>
+                </tr>
+                <tr>
+                    <td>bool</td>
+                    <td>Recebem dois valores booleanos possíveis: 'true' ou 'false'.</td>
+                </tr>
+                <tr>
+                    <td>var</td>
+                    <td>O mais próximo que temos de "variável dinâmica" no C#. Seu tipo é definido de uma vez por todas de acordo com o que ele receber primeiro. Se uma variável do tipo 'var' receber string, ele só pode receber string, e o mesmo vale com informações de outros tipos.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Vale lembrar que o tipo 'int', assim como os tipos de valores decimais, <b>também se subdividem em outros tipos de inteiro onde se especifica seu comprimento em bits</b>. 'int' antecede, em termos de comportar valores em bits do menor para o maior, o 'uint', 'long', 'ulong', etc. Todos esses são ramificações de tipo inteiro dentro do C#. O 'int', que é o mais comumente utilizado, suporta uma informações de número inteiro de comprimento de 32 bits.</p>
+
+        <footer>
+            <a href="../a02/a02.html">Página Anterior</a>
+            <a href="#">Próxima Página</a>
+        </footer>
+    </main>
+</body>
+</html>
