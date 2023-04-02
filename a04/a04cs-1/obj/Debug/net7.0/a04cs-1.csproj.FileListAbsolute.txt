@@ -1,0 +1,15 @@
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.csproj.AssemblyReference.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.AssemblyInfoInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.AssemblyInfo.cs
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.csproj.CoreCompileInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\bin\Debug\net7.0\a04cs-1.exe
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\bin\Debug\net7.0\a04cs-1.deps.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\bin\Debug\net7.0\a04cs-1.runtimeconfig.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\bin\Debug\net7.0\a04cs-1.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\bin\Debug\net7.0\a04cs-1.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\refint\a04cs-1.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\a04cs-1.genruntimeconfig.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\obj\Debug\net7.0\ref\a04cs-1.dll

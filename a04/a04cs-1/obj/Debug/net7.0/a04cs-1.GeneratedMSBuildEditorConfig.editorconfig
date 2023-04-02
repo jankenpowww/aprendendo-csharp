@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = a03cs
-build_property.ProjectDir = c:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a03\a03cs\
+build_property.RootNamespace = a04cs_1
+build_property.ProjectDir = c:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a04\a04cs-1\
