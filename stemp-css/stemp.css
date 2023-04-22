@@ -7,6 +7,11 @@
     font-family: monospace;
 }
 
+pre, code{
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
 a{
     color: rgb(149, 69, 255);
     text-decoration: none;

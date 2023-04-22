@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a06</title>
+</head>
+<body>
+    <h1>C# a06 - Formatando a Saída no Console</h1>
+
+    <main>
+        <p>Uma vez que o processo de concatenar texto e variável torna-se complicado, temos outras alternativas mais viáveis e de fácil compreensão dentro do C#. Observe:</p>
+
+        <br><br>
+
+        <h1>"O " + "jeito " + "convencional." + " (e outras formas mais interessantes de fazê-lo)"</h1>
+        <p>Consideremos o programa abaixo que soma dois valores...</p>
+
+<pre>
+<code>
+float <span class="tBranco">n1</span>, <span class="tBranco">n2</span>, <span class="tBranco">total</span>;
+
+Console.Write(<span class="tLaranja">"Digite um valor em R$ "</span>);
+<span class="tBranco">n1</span> = float.Parse(Console.ReadLine());
+
+Console.Write(<span class="tLaranja">"Digite outro valor em R$ "</span>);
+<span class="tBranco">n2</span> = float.Parse(Console.ReadLine());
+
+<span class="tBranco">total</span> = <span class="tBranco">n1</span> + <span class="tBranco">n2</span>;
+</code>
+</pre>
+
+        <p>Para concatenar esses valores com texto utilizando o sinal de mais, fazemos dessa forma:</p>
+
+<pre>
+<code>
+...
+Console.WriteLine(<span class="tLaranja">"R$ "</span> + <span class="tBranco">n1</span> + <span class="tLaranja">" + "</span> + <span class="tLaranja">"R$ "</span> + <span class="tBranco">n2</span> + <span class="tLaranja">" = "</span> + <span class="tLaranja">"R$ "</span> + <span class="tBranco">total</span>)
+</code>
+</pre>
+
+        <p>Não é tão complicado de entender em um primeiro momento, mas é inviável utilizar essa forma de formação de texto e variável a partir do momento em que temos que lidar com muitas variáveis, por exemplo.</p>
+
+        <p>Felizmente, temos alternativas mais simples e fáceis de fazer esse mesmo processo!</p>
+
+        <p><b>Formatação por índices:</b> aqui, você informa entre chaves, vários índices diferentes de 0 até x número de variáveis que você quer exibir dentro de uma string. Depois, é só informar as variáveis correspondentes à ordem em que foi definida dentro da string e dos índices.</p>
+
+<pre>
+<code>
+...
+
+<span class="tVerde">/*
+Índice 0 = n1, índice 1 = n2, índice 3 = total.
+Com a formatação de saída por índices, você basicamente informa a ordem
+em que as variáveis vão aparecer dentro da string.
+*/  
+</span>
+Console.WriteLine(<span class="tLaranja">"R$ {0} + R$ {1} = R$ {2}"</span>, <span class="tBranco">n1</span>, <span class="tBranco">n2</span>, <span class="tBranco">total</span>)
+</code>
+</pre>
+
+        <p>Note como <b>o código fica bem mais legível utilizando a formatação dessa forma</b>.</p>
+
+        <p>Com a formatação de índices, você também pode <b>aplicar tabulação na variável a ser exibida</b> e ainda se tratando de valores numéricos, você pode <b>converter o mesmo valor para um valor monetário local</b>. Os valores formatados como valor monetário <b>leva em consideração o localidade</b>, nesse caso, o valor será formatado como real (BRL).</p>
+
+<pre>
+<code>
+...
+
+<span class="tVerde">//Vai adicionar tabulação de 20 caracteres à esquerda da variável.</span>
+Console.WriteLine(<span class="tLaranja">"R$ {0,20} &lt;- n1"</span>, <span class="tBranco">n1</span>);
+Console.WriteLine(<span class="tLaranja">"R$ {0,20} &lt;- n2"</span>, <span class="tBranco">n2</span>);
+
+<span class="tVerde">//O ':c' formata o valor à ser exibido em um valor monetário local.</span>
+Console.WriteLine(<span class="tLaranja">"O resultado é {0:c}"</span>, <span class="tBranco">total</span>);
+</code>
+</pre>
+
+<p>...</p>
+
+<p>E ainda, temos uma forma ainda mais fácil, prática e legível de fazer a mesma coisa: <b>formatando variável e string utilizando o cifrão</b>. Nesta forma, você só precisa se preocupar com o conteúdo da string em si e informando o nome da variável diretamente entre as chaves!</p>
+
+<pre>
+<code>
+
+...
+Console.WriteLine($<span class="tLaranja">"{n1:c} + {n2:c} = {total:c}"</span>)
+</code>
+</pre>
+
+        <footer>
+            <a href="../a05/a05.html">Página Anterior</a>
+            <a href="#">Próxima Página</a>
+        </footer>
+    </main>
+</body>
+</html>
