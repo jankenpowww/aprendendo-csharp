@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a07</title>
+</head>
+<body>
+    <h1>C# a07 - Constantes em C#</h1>
+
+    <main>
+        <p>Assim como em qualquer linguagem de programação moderna, constante é o tipo de variável que recebe um valor fixo e que seu valor não se altera durante a execução de um programa. Isso significa que variáveis constantes não podem ter seu valor substituído ou atribuído novamente de qualquer forma.</p>
+
+<pre>
+<code>
+<span class="tVerde">//O valor é definido no momento da declaração de 
+uma variável constante.</span>
+const uint idade = 19;
+
+<span class="tVerde">//Constantes não podem receber qualquer outro valor 
+depois de serem atribuídas um valor.</span>
+idade = 32;
+
+Console.WriteLine(idade);
+</code>
+</pre>
+
+        <p class="alerta"><b>Impotante!</b> O tipo <span class="tCodigo">uint</span> define apenas valores inteiros positivos.</p>
+
+        <p>O próprio editor pode <b>indicar que há erro na tentativa de atribuir outro valor à uma constante que já foi declarada</b>. No entanto, ao executar o programa mesmo assim, temos o seguinte erro:</p>
+
+<pre>
+<code>
+<span class="tVermelho">... error CS0131: O lado esquerdo de uma atribuição deve ser 
+uma variável, uma propriedade ou um indexador ...</span>
+</code>
+</pre>
+
+        <p>Esse erro não é exatamente <b>sobre tentar atribuir uma variável constante que já foi declarada e inicializada</b>, mas sim, um erro de sintaxe a respeito do uso indevido ou incorreto de atribuir valor em variáveis. Variáveis constantes, uma vez que foram definidas, não possuem um mesmo nível de regras e comportamentos como qualquer outra variável normal dentro do C#.</p>
+
+        <footer>
+            <a href="../a06/a06.html">Página Anterior</a>
+            <a href="#">Próxima Página</a>
+        </footer>
+    </main>
+</body>
+</html>
