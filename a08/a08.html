@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a08</title>
+</head>
+<body>
+    <h1>C# a08 - Lendo Valores do Teclado</h1>
+
+    <main>
+        <p>Em aplicações com C# baseadas no console, <b>é imprescindível a entrada e saída de informações</b>. No mais, a entrada de dados é tão importante quanto a saída de dados, já que uma coisa se complementa a outra quando estamos desenvolvendo pequenos programas desse tipo.</p>
+
+        <p>Como visto anteriormente, utilizamos <span class="tCodigo">Console.ReadLine()</span> para toda vez que queremos com que o usuário entre com alguma informação no console. Dependendo do tipo de informação, <b>vimos que é necessário fazer conversões de tipos</b>, em especial quando o valor de entrada precisam ser números, vide exemplo abaixo:</p>
+
+<pre>
+<code>
+<span class="tVerde">//Comparando valores e testando se são valores iguais ou não.</span>
+
+Console.Write(<span class="tLaranja">"Digite um valor: "</span>);
+int n1 = int.Parse((Console.ReadLine()));
+
+Console.Write(<span class="tLaranja">"Digite outro valor: "</span>);
+int n2 = int.Parse((Console.ReadLine()));
+
+string resultado = n1 == n2 ? <span class="tLaranja">"São valores iguais."</span> : <span class="tLaranja">"São valores diferentes."</span>;
+
+Console.WriteLine(resultado);
+</code>   
+</pre>
+
+        <p>...</p>
+
+        <p>Mas para além do método de captura de valores convencional, temos também outro comando que vez ou outra parece sendo sugerido que é o <span class="tCodigo">Console.ReadKey()</span>. Este método é utilizado para registrar o valor dos botões pressionados no teclado. E, não, <b>não basta atribuir o valor numa string e tentar exibir na tela</b>. Há um "tipo primitivo", entre muitas aspas, no C# especifico para este tipo de ocorrência. Este tipo que e considerado na verdade uma estrutura do C# <b>para lidar com botões pressionados no teclado</b>, de maneira mais básica.</p>
+
+<pre>
+<code>
+Console.WriteLine(<span class="tLaranja">"Aperte qualquer botão..."</span>);
+
+<span class="tVerde">//ConsoleKeyInfo é a estrutura que define variáveis que "recebem valores 
+//pressionados no teclado". ReadKey() pode ser acessado novamente em outras 
+//propriedades durante a atribuíção de valores, que agora, é
+//acessado pelo valor atribuído.
+
+//Há muitas formas de capturar um valor do teclado, vide código-fonte do a08cs3.</span>
+
+ConsoleKeyInfo <span class="tBranco">botaoPressionado</span> = Console.ReadKey();
+
+Console.WriteLine("Botão pressionado: " + <span class="tBranco">botaoPressionado</span>.Key.toString());
+</code>
+</pre>
+
+        <footer>
+            <a href="../a07/a07.html">Página Anterior</a>
+            <a href="#">Próxima Página</a>
+        </footer>
+    </main>
+</body>
+</html>
