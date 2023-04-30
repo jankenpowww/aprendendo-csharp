@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a10</title>
+</head>
+<body>
+    <h1>C# a10 - Enumeradores</h1>
+
+    <main>
+        <h1>O tal do enum</h1>
+        <p>Em linguagens fortemente tipadas e orientadas a objeto como o próprio C#,</b> os enumeradores, ou enums, <b>são estruturas que organizam valores constantes finitos em um conjunto e que são enumerados</b>. E apesar de ter seu conceito bastante próximo dos vetores, ou arrays, os enums se destacam justamente por essas duas qualidades mencionadas: serem valores constantes de um determinado conjunto que são enumerados. Os enums facilitam, sobretudo, a legibilidade do código, já que organizar elementos e declará-los no código é feito de forma literal.</p>
+
+        <br><br>
+
+        <h1>Na prática...</h1>
+        <p>Enums são especialmente definidos por um conjunto de valores finito. Assim como a abstração da teoria da programação orientada a objeto que se aproxima muito ao que observamos no mundo real, também podemos abstrair às coisas para entender esse tipo de estrutura.</p>
+        
+        <p>E quais os exemplos que temos na vida real que remetem à essa descrição dos enums? Elementos que fazem parte ou compartilham de uma mesma característica e que são finitos? Temos os meses, as estações do ano e também os dias da semana. Todos eles fazem parte de um conjunto específico de alguma coisa, e além disso, compartilham de um elemento em comum que é bastante importante: eles podem ser enumerados.</p>
+
+        <p>Vamos considerar um enumerador dos dias da semana então. Para iniciar uma estrutura enum, utilizamos 'enum' como palavra reservada e então damos um identificador para este conjunto <s>assim como é feito com as arrays xD</s>.</p>
+
+<pre>
+<code>
+Using System;
+namespace a10cs;
+
+class Program
+{
+    <span class="tRosa">enum</span> <span class="tBranco">diasDaSemana</span> {<span class="tBranco">Domingo</span>, <span class="tBranco">Segunda</span>, <span class="tBranco">Terça</span>, <span class="tBranco">Quarta</span>, <span class="tBranco">Quinta</span>, <span class="tBranco">Sexta</span>,
+    <span class="tBranco">Sábado</span>}
+
+    static void Main (string[] args)
+    {
+        ...
+</code>
+</pre>
+
+        <p>E para atribuir à uma variável? Lembre-se que todos os elementos de um enum <b>são do tipo definido pelo identificador</b>. Ou seja, tanto <span class="tCodigo"><span class="tBranco">Domingo</span></span> quanto <span class="tCodigo"><span class="tBranco">Quinta</span></span> quanto todos os elementos deste enum são do tipo <span class="tCodigo">diasDaSemana</span>!</p>
+
+<pre>
+<code>
+...
+    <span class="tRosa">enum</span> <span class="tBranco">diasDaSemana</span> {<span class="tBranco">Domingo</span>, <span class="tBranco">Segunda</span>, <span class="tBranco">Terça</span>, <span class="tBranco">Quarta</span>, <span class="tBranco">Quinta</span>, <span class="tBranco">Sexta</span>,
+    <span class="tBranco">Sábado</span>}
+
+    static void Main (string[] args)
+    {
+        diasDaSemana <span class="tBranco">dia</span> = diasDaSemana.Segunda;
+
+        Console.WriteLine(<span class="tBranco">dia</span>);
+    }
+}
+</code>
+</pre>
+
+        <p>E o resultado no console é justamente mostrar 'Segunda'. Nada de conversão de strings a este ponto; se você quer mostrar o valor definido, é só mostrá-lo diretamente.</p>
+
+        <p>E quanto à parte mais importante que é eles serem enumerados, <b>é possível converter o valor para seu valor numérico via typecasting</b>.</p>
+
+<pre>
+<code>
+...
+    <span class="tRosa">enum</span> <span class="tBranco">diasDaSemana</span> {<span class="tBranco">Domingo</span>, <span class="tBranco">Segunda</span>, <span class="tBranco">Terça</span>, <span class="tBranco">Quarta</span>, <span class="tBranco">Quinta</span>, <span class="tBranco">Sexta</span>,
+    <span class="tBranco">Sábado</span>}
+
+    static void Main (string[] args)
+    {
+        diasDaSemana <span class="tBranco">dia</span> = diasDaSemana.Segunda;
+
+        int <span class="tBranco">numDia</span> = <em>(int)</em> <span class="tBranco">dia</span>; <span class="tVerde">//typecasting: convertendo para um valor inteiro.</span>
+
+        Console.WriteLine($<span class="tLaranja">"'{<span class="tBranco">dia</span>}' corresponde ao índice {<span class="tBranco">numDia</span>}
+        dentro do enum."</span>)
+    }
+}
+</code>
+</pre>
+
+        <span class="alerta">Importante! É possível fazer o typecasting de um valor numérico utilizando o próprio tipo do enum.</span>
+
+        <p>O resultado no console será:</p>
+
+<pre>
+<code>
+<span class="tBranco">'Segunda' corresponde ao índice 1 dentro do enum.</span>
+</code>
+</pre>
+
+        <p>...</p>
+
+        <p>Para recaptular: enumeradores nada mais é do que a estrutura que organiza em uma coleção várias constantes finitas que possuem valores correspondentes ao seu índice, valores esses <b>obtidos por conversões explícitas feitas com typecast</b>. No C#, ainda há a possibilidade de atribuir valores de número inteiro para um elemento dentro do índice, que retorna através do typecast o valor predefinido.</p>
+
+        <footer>
+            <a href="../a09/a09.html">Página Anterior</a>
+            <a href="#">Próxima Página</a>
+        </footer>
+    </main>
+</body>
+</html>
