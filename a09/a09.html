@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a09</title>
+</head>
+<body>
+    <h1>C# a09 - Operações de Bitwise</h1>
+
+    <main>
+        <p>Os operadores Bitwise, dentro do C# e outras linguagens modernas, são <b>os operadores que lidam e manipulam números baseados em suas representações binárias.</b> Os operadores Bitwise, quando usados em representações numéricas de base 10, <b>considera a representação do seu valor binário antes de interferir no seu valor orginal</b>, que faz isso deslocando o digito de uma das extremidades desse valor em binário para a esquerda ou direita.</p> 
+        
+        <p>Os operadores Bitwise, no C#, também é bem representativo quanto essa última informação: utilizamos <b>&lt;&lt;</b> quando queremos deslocar os digitos de um binário para a esquerda, e <b>&gt;&gt;</b> quando para direita, <b>informando um número x de deslocamentos</b>. Para a esquerda, o valor utilizado multiplica seu valor por 2, enquanto que para a direita, o valor "perde o dobro", como se tivesse divido este valor por 2.</p>
+
+        <p>Para entender melhor isso, considere o valor 25. A representação binária desse valor é 00011001.</p>
+
+<pre>
+<code>
+<span class="tVerde">//25 é igual a '00011001' na sua representação binária.</span>
+int valor = 25;
+
+Console.WriteLine(valor &lt;&lt; 1);
+</code>
+</pre>
+
+        <p>A variável <span class="tCodigo">valor</span>, que armazena o valor 25, vai ser deslocada para a esquerda 1 vez. Como dito antes, o que vai determinar a alteração desse valor <b>é justamente o lado em que a representação binária desse valor vai ser deslocada</b>. Toda vez que o valor vai ser deslocado, <b>é o equivalente a multiplicar o valor em questão por dois, se para à esquerda, e dividir por dois, se para à direita</b>, considerando o número de deslocamentos desse valor.</p>
+
+        <p>Como o valor está sendo deslocado para a esquerda uma vez, 25 será multiplicado por dois uma única vez, <b>e o resultado printado no console é '50'</b>.</p>
+
+        <p>E a representação binária de 25 que era '00011001' <b>dessa vez, é '00110010', que é o valor binário correspondente ao valor 50</b> Podemos descobrir isso atribuindo binários literais em variáveis e exibindo-os em seguida. Observe:</p>
+
+        <br><br>
+
+        <h1>Binários em C#</h1>
+        <p>À partir da versão 7.0 do C#/.NET é possível trabalhar com <b>binários literais</b>. Um binário no C# é identificado pelo prefixo 0b + a representação em binário de um valor. Sabemos que a representação de um binário é composto por oito digitos.</p>
+        
+        <p>O que importa aqui é o primeiro valor diferente de zero da esquerda para a direita em um valor binário: '00011001' é igual à 25, como também pode ser '11001'. Utilizamos este último depois do prefixo para atribuir um valor em formato binário no C#. Aproveitamos também para atribuir o valor de 50 que chegamos, de acordo com a lógica dos operadores Bitwise, e ver se '00110010' é de fato a representação binária de 50. Como é feito o deslocamento para esquerda, vimos que o valor da ponta da direita à aparecer à cada deslocamento é um 0, e isso é feito aqui também <b>ao representar um binário literal em C#</b>.</p>
+
+<pre>
+<code>
+int bin25 = <span class="tRosa">0b11001</span>; <span class="tVerde">//25</span>
+int bin50 = <span class="tRosa">0b110010</span>; <span class="tVerde">//50</span>
+int bin25 = <span class="tRosa">0b1100100</span>; <span class="tVerde">//100</span>
+</code>
+</pre>
+
+        <footer>
+            <a href="../a07/a07.html">Página Anterior</a>
+            <a href="../a09/a09.html">Próxima Página</a>
+        </footer>
+    </main>
+</body>
+</html>

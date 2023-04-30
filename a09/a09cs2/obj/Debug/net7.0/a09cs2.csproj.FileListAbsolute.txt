@@ -1,0 +1,15 @@
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.csproj.AssemblyReference.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.AssemblyInfoInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.AssemblyInfo.cs
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.csproj.CoreCompileInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\bin\Debug\net7.0\a09cs2.exe
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\bin\Debug\net7.0\a09cs2.deps.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\bin\Debug\net7.0\a09cs2.runtimeconfig.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\bin\Debug\net7.0\a09cs2.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\bin\Debug\net7.0\a09cs2.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\refint\a09cs2.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\a09cs2.genruntimeconfig.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a09\a09cs2\obj\Debug\net7.0\ref\a09cs2.dll
