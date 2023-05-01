@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a11</title>
+</head>
+<body>
+    <h1>C# a11 - Conversões de Tipos (typecast)</h1>
+
+    <main>
+        <h1><em>Typecasting</em></h1>
+        <p>... Ou <b>conversão explícita de tipos</b>, é uma das formas de conversões de tipos vistos anteriormente, <b>onde a diretiva do tipo em questão é informada dentro de uma expressão de atribuição</b>. No exemplo passado sobre enumeradores, vimos que criar um <b>envolve o processo de criar um "tipo" novo para o conjunto de constantes dos dias da semana</b>. E que para extrair o valor de índice de um dia, tivemos que realizar um typecasting convertendo o tipo <span class="tCodigo">diasDaSemana</span> para um valor inteiro.</p>
+
+        <p>E sim, <b>até mesmo o novo tipo que criamos pode ser utilizado para o typecast de tipos</b>. Observe:</p>
+
+<pre>
+<code>
+...
+    <span class="tRosa">enum</span> <span class="tBranco">diasDaSemana</span> {<span class="tBranco">Domingo</span>, <span class="tBranco">Segunda</span>, <span class="tBranco">Terça</span>, <span class="tBranco">Quarta</span>, <span class="tBranco">Quinta</span>, <span class="tBranco">Sexta</span>,
+    <span class="tBranco">Sábado</span>}
+
+    static void Main (string[] args)
+    {
+        diasDaSemana <span class="tBranco">dia</span> = <em>(diasDaSemana)</em> 4;
+    }
+}
+</code>
+</pre>
+
+        <p>Sendo o valor '4' correspondente ao índice de 'Quinta', o typecasting converterá este valor para o tipo diasDaSemana com o valor correspondente à este índice. Em outras palavras, a variável 'dia' vai receber 'Quinta'.</p>
+
+        <p>E assim como podemos fazer essa conversão explícita com os valores numéricos e até tipos definidos por enumeradores, é claro que existe <b>typecast para outros tipos definidos</b>.</p>
+
+        <br><br>
+
+        <h1>Explícitas e implícitas</h1>
+        <p>Por mais que estejamos à par sobre como funcionam conversões explícitas, há mais um outro importante à ser falado: a conversão implicita.</p>
+
+        <p>As conversões implícitas simplesmente acontecem quando você atribui um valor à uma variável, por mais que seus tipos se divirjam. Em relação à valores de tipos numéricos, é natural entender que podemos atribuir um valor de número quebrada em uma variável do tipo inteiro, e vice-versa. <b>Os valores à serem exibidos, óbvio, sofrerão essas mudanças para se ajustarem ao tipo em que foram atribuídas</b>.</p>
+
+        <p><em>"Então é possível atribuir um valor double dentro de uma variável float sem nenhum problema?"</em>, sim e não. A começar que fazer isso não seria possível sem uma conversão explícita. No caso de uma conversão implícita, isso entra totalmente fora de questão: até saber do fato de que é possível fazer o inverso: atribuir um valor float para uma variável do tipo double!</p>
+
+<pre>
+<code>
+float n1 = 3.43f;
+double n2 = n1;
+</code>
+</pre>
+
+        <p>Porquê? Isso se deve mais uma vez <b>ao comprimento suportado por cada tipo de variável</b>. Os principais tipos numéricos de valor de ponto flutuante que temos no C# são, em ordem de menor capacidade de comprimento para a maior capacidade, <b>float</b> e <b>double</b>. <b>Da mesma forma em que podemos atribuir um valor de tipo float para uma variável do tipo double, não podemos fazer o mesmo tentando atribuir um valor do tipo decimal para uma variável do tipo double</b>. Justamente porque eles são incompatíveis quanto ao comprimento por um ser maior que o outro. Tudo isso é resolvido via typecast de tipos.</p>
+
+        <p>Então, nesse cenário improvável de tentar atribuir um valor do tipo double para uma variável do tipo float, que suporta um número de comprimento muito menor que este, <b>resolvemos fazendo um typecasting do valor em questão para o tipo da variável a receber o valor.</b></p>
+
+<pre>
+<code>
+double n1 = 3.43d;
+float n2 = <em>(float)</em> n1;
+</code>
+</pre>
+
+        <p>... E então, a atribuição acontece sem problemas.</p>
+
+        <p>O typecasting, ou a conversão explícita, existe para assegurar que <b>os valores passados entre variáveis sejam íntegros</b> ou quando os valores passados devem correponder à certo tipo enquanto são de outros tipos. Vale lembrar que o typecasting em certos casos não são permitidos, o que é alertado prontamente pelo console ou pelo próprio editor de código quando há uma conversão explícita em uma expressão de atribuição ou não.</p>
+
+        <footer>
+            <a href="../a09/a09.html">Página Anterior</a>
+            <a href="../a11/a11.html">Próxima Página</a>
+        </footer>
+        
+    </main>
+</body>
+</html>
