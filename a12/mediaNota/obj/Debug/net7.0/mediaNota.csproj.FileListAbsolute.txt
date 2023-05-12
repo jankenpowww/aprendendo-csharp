@@ -1,0 +1,15 @@
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\bin\Debug\net7.0\mediaNota.exe
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\bin\Debug\net7.0\mediaNota.deps.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\bin\Debug\net7.0\mediaNota.runtimeconfig.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\bin\Debug\net7.0\mediaNota.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\bin\Debug\net7.0\mediaNota.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.csproj.AssemblyReference.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.AssemblyInfoInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.AssemblyInfo.cs
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.csproj.CoreCompileInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\refint\mediaNota.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\mediaNota.genruntimeconfig.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\mediaNota\obj\Debug\net7.0\ref\mediaNota.dll

@@ -1,0 +1,15 @@
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\bin\Debug\net7.0\a12cs6.exe
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\bin\Debug\net7.0\a12cs6.deps.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\bin\Debug\net7.0\a12cs6.runtimeconfig.json
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\bin\Debug\net7.0\a12cs6.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\bin\Debug\net7.0\a12cs6.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.csproj.AssemblyReference.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.AssemblyInfoInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.AssemblyInfo.cs
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.csproj.CoreCompileInputs.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\refint\a12cs6.dll
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.pdb
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\a12cs6.genruntimeconfig.cache
+C:\Users\mathe\Documents\Dev\Estudo\aprendendo-csharp\a12\a12cs6\obj\Debug\net7.0\ref\a12cs6.dll

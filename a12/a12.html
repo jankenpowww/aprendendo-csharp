@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a12, a13, a14, a15, a16</title>
+</head>
+<body>
+    <h1>C# a12, a13, a14, a15, a16 - Comandos de Decisão</h1>
+
+    <main>
+        <h1>Se sim, se não se, se não...</h1>
+        <p>Os comandos de decisão ou estruturas condicionais são parte importante de um programa escrito em qualquer linguagem, já que são responsáveis <b>por determinar a direção de fluxos de execução de um programa com base em decisões, parâmetros e valores definidos pelo programador ou regra de negócio de uma aplicação</b>. De forma mais resumida, ele determina, através de um teste lógico, <b>qual bloco de código será executado dependendo do resultado desse teste</b>. Se sim, ele executa um bloco de código, se não, ele executa o outro.</p>
+
+        <p>As estruturas condicionais em C# são extremamente parecidas com as estruturas condicionais vistas em JavaScript, PHP, Java e outras linguagens oriundas essencialmente da linguagem C, algumas se diferenciando em um aspecto ou outro. <b>Uma estrutura condicional pode ser dividida em três tipos: simples, compostas e aninhadas</b>. Vejamos um exemplo de cada um a seguir.</p>
+
+        <br><br>
+
+        <p><b>Estrutura condional simples:</b> é a estrutura de condição que verifica um valor e determina seu resultado apenas se o teste retornar o verdadeiro. <b>Como não há a alternativa para caso o teste retornar falso</b>, se for o caso, nada vai acontecer. Observe:</p>
+
+<pre>
+<code>
+Console.Write("Qual o seu nome? ");
+string? nome = Console.ReadLine();
+
+<span class="tVerde">//Captura a substring de índice 0 de uma string e compara o valor.</span>
+if (nome?.Substring(0, 1).ToLower() == "m"){ 
+    Console.WriteLine("Seu nome começa com M!");
+}
+
+Console.WriteLine("Seu nome é '{0}'", nome);
+</code>
+</pre>
+
+        <p>No programa acima, é verificado numa estrutura de condição simples <b>se o primeiro índice da string que compõe o nome começa com a letra M</b>. Caso sim, o <span class="tCodigo">Console.WriteLine()</span> dentro dessa estrutura é executado. Caso não, a mensagem não é mostrada. O último WriteLine é executado em seguida, em ambos os casos.</p>
+
+        <p>...</p>
+
+        <p><b>Estrutura condicional composta:</b> é quando a estrutura condicional, diferentemente do exemplo anterior, possui um fluxo para caso o teste lógico não retornar verdadeiro. Se na estrutura condicional simples a mensagem só era exibida se o nome começar com 'M', <b>com a estrutura condicional composta, podemos determinar também uma mensagem para caso o nome digitado não começar com 'M'.</b> Isso significa que, para ambos os casos, uma das partes dessa estrutura será executada.</p>
+
+<pre>
+<code>
+Console.Write("Qual o seu nome? ");
+string? nome = Console.ReadLine();
+
+if (nome?.Substring(0, 1).ToLower() == "m"){
+    Console.WriteLine("Seu nome começa com 'M'!");
+} else {
+    Console.WriteLine("Seu nome não começa com 'M'. Começa com '{0}'.",
+    nome?.Substring(0, 1).ToUpper());
+}
+
+Console.WriteLine("Seu nome é '{0}'", nome);
+</code>
+</pre>
+
+        <p>E então, toda vez que um nome não começar com 'M', o teste lógico retorna falso e cai no bloco de código envolto pelo 'else'.</p>
+
+        <p>Quando há a necessidade de testar valores onde o retorno está estrito entre dois resultados possíveis, <b>é possível resumir uma estrutura condicional em uma expressão envolvendo operadores ternários</b>, onde você pode atribuir a string do resultado dentro de uma variável e exibi-la em seguida, por exemplo.</p>
+
+<pre>
+<code>
+string resultado = nome?.Substring(0, 1).ToLower() == "m" ? <span class="tLaranja">"Seu nome 
+começa com 'M'!"</span> : <span class="tLaranja">"Seu nome não começa com 'M'."</span>;
+</code>
+</pre>
+
+        <p>...</p>
+
+        <p><b>Estrutura condicional aninhada:</b> é utilizado quando o teste de valores está além de dois resultados possíveis. Aqui, os valores testados no teste lógico vai entrar na primeira condição que corresponder verdadeiro. Isso é feito até chegar na última condição, que pode ser um 'else' ou mais um 'else if'. 'else' se nenhuma das outras condições forem verdadeiras.</p>
+
+<pre>
+<code>
+Console.Write("Quantos anos você tem? ");
+uint idade = uint.Parse(Console.ReadLine());
+
+if (idade >= 0 && idade <= 17){
+    Console.WriteLine("Você é menor de idade.");
+
+} else if (idade >= 18 && idade <= 60){
+    Console.WriteLine("Você é maior de idade.");
+
+} else {
+    Console.WriteLine("Você é maior de idade (e idoso).");
+}
+</code>
+</pre>
+
+        <p>Se o valor da idade digitada pelo usuário não estiver entre 0 e 17 ou 18 e 60, ele retorna falso e cai na última condição. É claro que o valor de idade deve ser um valor maior ou igual à zero, por isso, se nenhuma das duas condições forem verdadeiras, o resultado cairá na última condição que determina que o usuário tem mais de 60 anos.</p>
+
+        <p>...</p>
+
+        <p>Além da famigerada estrutura de condição if/else if/else, temos também outra estrutura de condição especial...</p>
+
+        <br><br>
+
+        <h1>... O tal do <em>switch</em></h1>
+        <p>O <em>switch</em> funciona essencialmente como uma estrutura de condição aninhada. Ele passa um valor e o testa em vários 'casos' diferentes. Assim como numa estrutura condicional aninhada, o valor testado também pode não corresponder em nenhum dos casos e cair no que seria o 'else' desse tipo de estrutura, o 'default'. Observe:</p>
+
+<pre>
+<code>
+Console.Write("Digite um número entre 0 e 2: ")
+int num = int.Parse(Console.ReadLine())
+
+switch (num)
+{
+    case 0:
+        Console.WriteLine("Você digitou zero.");
+    break;
+
+    case 1:
+        Console.WriteLine("Você digitou um.");
+    break;
+
+    case 2:
+        Console.WriteLine("Você digitou dois");
+    break;
+
+    default:
+        Console.WriteLine("Você digitou um número diferente do intervalo proposto.")
+    break;
+}
+</code>
+</pre>
+
+        <p>É possível também <b>aninhar cases de um switch se valor da variável se encaixa em alguma delas, de alguma forma</b>. O exemplo acima poderia ser representado desta forma, se o intervalo proposto fosse aninhado:</p>
+
+<pre>
+<code>
+Console.Write("Digite um número entre 0 e 2: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+switch (num)
+{
+    case 0:
+    case 1:
+    case 2:
+        Console.WriteLine($"Você digitou {num}.");
+    break;
+
+    default:
+        Console.WriteLine($"VocÊ digitou um número diferente do
+        intervalo proposto.");
+    break;
+}
+</code>
+</pre>
+
+        <p>Para o <em>switch</em>, no C#, há o comando <span class="tCodigo">goto</span>, que pode ser utilizado <b>dentro de um case para indicar onde o fluxo deve cair</b>.</p>
+
+<pre>
+<code>
+...
+
+    default:
+        Console.WriteLine("Você digitou um número diferente do 
+        intervalo proposto. Definindo o valor como zero...")
+
+    goto case 0;
+}
+</code>
+</pre>
+
+        <p>O comando <span class="tCodigo">goto</span> vai forçar que a condição caia dentro de outro case definido dentro do switch. Aqui ele age como um comando <span class="tCodigo">break</span>, <b>quebrando o fluxo de comparação de valores dos cases testados se ele corresponder verdadeiro a algum deles</b>.</p>
+
+        <p>Mas a utilização do comando não para por aí...</p>
+
+        <br><br>
+
+        <h1>Vai para... Onde?</h1>
+        <p>Fugindo um pouco das estruturas de comparação e dando uma introdução, por fim, nas estruturas de repetição <s>de uma forma bem arcaica e não recomendável, até por que é só um funfact da função em si</s>, o <span class="tCodigo">goto</span> é utilizado com outro artifício bem semelhante aos cases do switch só que este pode ser utilizado em qualquer outro lugar do código: as labels.</p>
+
+        <p>Uma label é escrita como um switch case qualquer, mas não é envolto ou definido por um tipo de valor. Ele só é <b>uma espécie de marcador que, ao ser indicado pelo goto, retorna o código para aquele ponto</b>. Muito semelhante ao conceito das estruturas de repetição, não é? Ééééé...</p>
+
+<pre>
+<code>
+<span class="tVerde">//Definindo uma label. É daqui que o 
+código se repete uma vez que há um comando goto
+// que retornará o fluxo de execução para cá.</span>
+
+repeteCodigo:
+    const int respostaCerta = 3 - 4 * 2;
+
+    Console.Write("3 - 4 * 2 é igual a ... ");
+    int resposta = int.Parse(Console.ReadLine());
+
+    if (resposta == respostaCerta){
+        Console.WriteLine("Você acertou!");
+    } else {
+        Console.WriteLine("\nVocê errou tente novamente!");
+        goto repeteCodigo;
+    }
+</code>
+</pre>
+
+        <p><span class="tCodigo">respostaCerta</span> armazerá o resultado da expressão acima que é comparada com o valor da resposta. Se caso o usuário resposder certo, o programa cai no primeiro if e o programa se encerra, se não, o programa retorna até o label <span class="tCodigo">repeteCodigo</span> e repete o código, permitindo uma nova tentativa de responder para o o usuário.</p>
+
+        <footer>
+            <a href="../a11/a11.html">Página Anterior</a>
+            <a href="#">Próxima Página</a>
+        </footer>
+        
+    </main>
+</body>
+</html>
