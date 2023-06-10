@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stemp-css/stemp.css" type="text/css">
+    <title>a17</title>
+</head>
+<body>
+    <h1>C# a17 - Array / Vetor</h1>
+
+    <main>
+        <h1>O que é?</h1>
+        <p>Um vetor é como se chama o conjunto de variáveis organizada por índices de 0 até certo número de elementos, que armazenam valores. No C# e em linguagens de tipagem forte, os vetores <b>reúnem um conjunto de elementos de um mesmo tipo</b>, ao contrário de linguagens como JavaScript, que permite reunir strings, booleanos e objetos inteiros em uma única Array.</p>
+
+        <p>Mais uma vez: no C#, os vetores ou arrays são definidos com um tipo existente, primitivo ou não, referente à cada elemento a ser armazenado. Observe como criamos <b>uma array unidimensional no C#</b>:</p>
+
+<pre>
+<code>
+<span class="tVerde">//Arrays no C# - armazenam uma coleção de valores de tamanho dinâmico
+//e de tipo definido.</span>
+int[] <span class="tBranco">arrayNumeros</span> = {<span class="tLaranja">143</span>, <span class="tLaranja">22</span>, <span class="tLaranja">354</span>, <span class="tLaranja">432</span>, <span class="tLaranja">43</span>};
+</code>
+</pre>
+
+        <p>Podemos retornar <b>o comprimento de um vetor</b> acessando sua propriedade de classe 'Length'.</p>
+
+<pre>
+<code>
+...
+
+int[] <span class="tBranco">arrayNumeros</span> = {<span class="tLaranja">143</span>, <span class="tLaranja">22</span>, <span class="tLaranja">354</span>, <span class="tLaranja">432</span>, <span class="tLaranja">43</span>};
+
+Console.Write($<span class="tLaranja">"Há {<span class="tBranco">arrayNumeros.Length</span>} elementos dentro do vetor"</span>)
+</code>
+</pre>
+
+        <p>E assim como com strings, <b>podemos retornar um valor com base em um índice existente dentro de um Array...</b></p>
+
+<pre>
+<code>
+...
+
+int[] <span class="tBranco">arrayNumeros</span> = {<span class="tLaranja">143</span>, <span class="tLaranja">22</span>, <span class="tLaranja">354</span>, <span class="tLaranja">432</span>, <span class="tLaranja">43</span>};
+
+<span class="tVerde">//Retorna 432.</span>
+Console.WriteLine(<span class="tLaranja">"O valor presente no índice 3 é {0}."</span>, <span class="tBranco">arrayNumeros</span>[<span class="tLaranja">3</span>]);
+</code>
+</pre>
+
+        <p>... E também é possível substituir um valor de índice ou adicionar um novo índice à Array de forma muito simples. Veja:</p>
+
+<pre>
+<code>
+...
+
+int[] <span class="tBranco">arrayNumeros</span> = {<span class="tLaranja">143</span>, <span class="tLaranja">22</span>, <span class="tLaranja">354</span>, <span class="tLaranja">432</span>, <span class="tLaranja">43</span>};
+
+<span class="tVerde">//Substituíndo o valor do índice 1.</span>
+arrayNumeros[1] = 7;
+
+<span class="tVerde">//A array completa será composta por...</span>
+<span class="tVerde">//143, 7, 354, 432, 43</span>
+</code>
+</pre>
+
+        <p>E atenção: diferente do que é visto em outras linguagens, <b>a forma com que declaramos uma array em C# aqui foi definir uma array de tamanho fixo</b>. Isso significa que, apesar do momento de declaração de <span class="tCodigo">arrayNumeros</span> definirmos <b>o seu comprimento total de acordo com os elementos presentes nele</b>, isto é, um array de inteiro com 5 elementos/de comprimento, <b>não significa que podemos, de primeira maneira, adicionar mais um elemento à array</b>. Isso significa que <b>não existe o índice de número 5 em diante na nossa array, justamente por ser um array de tamanho fixo</b>, e não dinâmico.</p>
+
+        <p>Para entender melhor como arrays de tamanho fixo funcionam na linguagem, vamos considerar esse pedaço de código, onde declaramos uma array e seu tamanho fixo de forma mais objetiva, ao contrário de defini-la populando com elementos diretamente.</p>
+
+<pre>
+<code>
+int[] <span class="tBranco">numeros</span> = new int[<span class="tLaranja">3</span>];
+</code>
+</pre>
+
+        <p>Acima, declaramos <b>um array de inteiro de tamanho 3</b>. E sim, diferente das outras sintaxes de outras linguagens da qual estamos acostumados, essa forma de declarar, ou melhor, instanciar uma array, não indica que '3' é um elemento que faz parte da array. Note que <b>não há diferença entre a forma anterior e esta de se declarar/instanciar arrays</b>, todas sem exceção continuam sendo arrays de tamanho fixo. O que muda de um para o outro é que, desta forma, <b>o tamanho da array é definida explicitamente</b>, enquanto ao dos códigos anteriores, a definição de tamanho se dá pelo tanto de elementos presentes no momento da instanciação.</p>
+
+        <p>De toda forma, <span class="tCodigo">numeros</span> é um array de comprimento 3, onde os espaços vão do índice 0 até, sendo ele <b>um array fixo</b>.</p>
+
+        <p>Se tentarmos adicionar um elemento ao índice 3, da qual está além do limite de comprimento da Array, o resultado não poderia ser outro, se não um erro:</p>
+
+<pre>
+<code>
+<span class="tVermelho">Unhandled exception. System.IndexOutOfRangeException: Index was outside the bounds of the array.</span>
+</code>
+</pre>
+
+        <footer>
+            <a href="../a12/a12.html">Página Anterior</a>
+            <a href="#">Próxima Página</a>
+        </footer>
+        
+    </main>
+</body>
+</html>
